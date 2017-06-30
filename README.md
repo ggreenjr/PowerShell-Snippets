@@ -20,11 +20,9 @@ custom code into the scripts you are working on.  In order to make use of the `.
 
 
 ### Powershell-Script_Documentation
-
 #### Description:
 This piece of simple code will comment out any notes that you might want to put in your scripts without having to place a `#` at the
 beginning of each line, effectively turning everything between the `<#` and `#>` brackets into a text box for comments.
-
 #### Use Case:
 I find this documentation style to be very useful in any script that is more than just a couple lines, or when there is an answer
 file or an output file involved in the execution of the script.  It allows for documentation of the type of answer file that is needed
@@ -33,45 +31,37 @@ of the output files and expected fields within them, script requirements, purpos
 script at the very top of it.  This documentation is particularly helpful and can save large amounts of time when you have a script
 that gets run only occasionally and required answer files may not be readily available, or is being run on a machine that does not
 usually run it.
-
 #### Related Files:
 Powershell-Script_Documentation.ps1  
 Powershell-Script_Documentation.snippets.ps1xml  
 
 
 ### Powershell-Verify_Admin
-
 #### Description:
 This piece of code allows a script to verify that it is running in a Powershell instance that was started in an administrator context
 within Windows.  If it is determined that the shell is not running in an administrator context, it will write a message to the host 
 informing the user that the script is not running as an administrator, requesting that it be re-run from an administrator context, and
 then issues a break command to prevent the script from continuing to run.
-
 #### Use Case:
 This can be particularly useful when running scripts which will be pulling data or making modifications to systems they are running on
 where those changes require Administrator level UAC access.  
-
 #### Related Files:
 Powershell-Verify_Admin.ps1  
 Powershell-Verify_Admin.snippets.ps1xml  
 
 
 ### Powershell-Custom_Object
-
 #### Description:
 This code will create a custom object from specified data that is already stored in variables in the Powershell session.
-
 #### Use Case:
 This particular piece of code is useful when a script has gathered information from multiple sources and there is a need to have that
 data manipulated as a single object or seamlessly exported to an output file in a consistant fashion.
-
 #### Related Files:
 Powershell-Custom_Object.ps1  
 Powershell-Custom_Object.snippets.ps1xml  
 
 
 ### Powershell-Export_Loop
-
 #### Description:
 This piece of code will use a Try/Catch loop to catch disk write failures while exporting an object to a CSV file, notify the user of
 any write failure, and sleep for five seconds before trying again.
@@ -87,7 +77,6 @@ Powershell-Export_Loop.ps1
 Powershell-Export_Loop.snippets.ps1xml  
 
 ### Powershell-Loop_Label
-
 #### Description:
 This piece of code will assign a label to a `Do`, `Foreach`, `For`, or `While` loop.
 
