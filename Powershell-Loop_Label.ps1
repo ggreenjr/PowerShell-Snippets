@@ -1,0 +1,1 @@
+﻿:$loopname ForEach ($server in $server_list) {$scriptblock}
