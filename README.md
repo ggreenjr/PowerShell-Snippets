@@ -8,8 +8,8 @@ in scripts I was working on (either directly as written or built in as functions
 useful as functions in my PowerShell profile to perform certain tasks on an as needed basis, and others I have found useful in both of
 the aforementioned scenarios.  For each snippet of code, there should be two files in the repository, a `.ps1` file and a 
 `.snippets.ps1xml` file.  The `.ps1` files are Powershell files containing the code snips.  The `.snippets.ps1xml` files are used in
-conjunction with the Powershell ISE in order to create shortcuts for placing custom code into the scripts you are working on.  In 
-order to make use of `.snippets.ps1xml` files, they must be put in the `%USERPROFILE%\Documents\WindowsPowerShell\Snippets` 
+conjunction with the Powershell ISE in order to create shortcuts for placing custom code into the scripts you are working on.  
+To make use of `.snippets.ps1xml` files, they must be put in the `%USERPROFILE%\Documents\WindowsPowerShell\Snippets` 
 directory of the system on which you are using the Powershell ISE.  It is my hope that you will find these bits as useful as I have.
 
 ## Snippets:
