@@ -1,7 +1,7 @@
 # PowerShell-Snippets
 A collection of .ps1 and .ps1xml files containing useful code snippets for PowerShell
 
-## Use Case:
+## Summary:
 The files found in this repository and outlined in this document are snippets of PowerShell code that I have found to be
 useful for various reasons on various PowerShell scripting projects.  Some of these I have found to be useful as pieces of code
 in scripts I was working on (either directly as written or built in as functions to call later on), and others I have found to be
