@@ -9,7 +9,7 @@ useful as functions in my PowerShell profile to perform certain tasks on an as n
 the aforementioned scenarios.  For each snippet of code, there should be two files in the repository, a `.ps1` file and a 
 `.snippets.ps1xml` file.  The `.ps1` files are Powershell files containing the code snips.  The `.snippets.ps1xml` files are used in
 conjunction with the Powershell ISE in order to create shortcuts for placing custom code into the scripts you are working on.  In 
-order to make use of `.snippets.ps1xml` files, they must be put in the `%USERPROFILE%\Documents\WindowsPowerShell\Snippets`  
+order to make use of `.snippets.ps1xml` files, they must be put in the `%USERPROFILE%\Documents\WindowsPowerShell\Snippets` 
 directory of the system on which you are using the Powershell ISE.  It is my hope that you will find these bits as useful as I have.
 
 ## Snippets:
