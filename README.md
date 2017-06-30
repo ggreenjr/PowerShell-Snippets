@@ -14,7 +14,7 @@ library, borrow any pieces that you find useful, and provide feedback if you fee
 [Powershell-Verify_Admin](https://github.com/ggreenjr/PowerShell-Snippets/README###Powershell-Verify_Admin "Powershell-Verify_Admin")  
 [Powershell-Custom_Object](https://github.com/ggreenjr/PowerShell-Snippets/README###Powershell-Custom_Object "Powershell-Custom_Object")  
 [Powershell-Export_Loop](https://github.com/ggreenjr/PowerShell-Snippets/README###Powershell-Export_Loop "Powershell-Export_Loop")  
-[Powershell-Loop_Label](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#Powershell-Loop_Label "Powershell-Loop_Label")  
+[Powershell-Loop_Label](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-loop_label "Powershell-Loop_Label Documentation")  
 
 ### Powershell-Script_Documentation
 
