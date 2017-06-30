@@ -32,8 +32,8 @@ script at the very top of it.  This documentation is particularly helpful and ca
 that gets run only occasionally and required answer files may not be readily available, or is being run on a machine that does not
 usually run it.
 #### Related Files:
-Powershell-Script_Documentation.ps1  
-Powershell-Script_Documentation.snippets.ps1xml  
+[Powershell-Script_Documentation.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Script_Documentation.ps1)  
+[Powershell-Script_Documentation.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Script_Documentation.snippets.ps1xml)  
 
 
 ### Powershell-Verify_Admin
