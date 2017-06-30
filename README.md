@@ -46,8 +46,8 @@ then issues a break command to prevent the script from continuing to run.
 This can be particularly useful when running scripts which will be pulling data or making modifications to systems they are running on
 where those changes require Administrator level UAC access.  
 #### Related Files:
-Powershell-Verify_Admin.ps1  
-Powershell-Verify_Admin.snippets.ps1xml  
+[Powershell-Verify_Admin.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Verify_Admin.ps1)  
+[Powershell-Verify_Admin.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Verify_Admin.snippets.ps1xml)  
 
 
 ### Powershell-Custom_Object
@@ -57,8 +57,8 @@ This code will create a custom object from specified data that is already stored
 This particular piece of code is useful when a script has gathered information from multiple sources and there is a need to have that
 data manipulated as a single object or seamlessly exported to an output file in a consistant fashion.
 #### Related Files:
-Powershell-Custom_Object.ps1  
-Powershell-Custom_Object.snippets.ps1xml  
+[Powershell-Custom_Object.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Custom_Object.ps1)  
+[Powershell-Custom_Object.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Custom_Object.snippets.ps1xml)  
 
 
 ### Powershell-Export_Loop
@@ -73,8 +73,8 @@ lock write access to the file.  Using this loop will prevent the script from con
 written the required data to the output file.
 
 #### Related Files:
-Powershell-Export_Loop.ps1  
-Powershell-Export_Loop.snippets.ps1xml  
+[Powershell-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Export_Loop.ps1)  
+[Powershell-Export_Loop.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Export_Loop.snippets.ps1xml)  
 
 ### Powershell-Loop_Label
 #### Description:
@@ -86,5 +86,5 @@ to break the parent loop from within a child loop needs to be established.  A `B
 loop label to specify what label is broken by the `Break` command.
 
 #### Related Files:
-Powershell-Loop_Label.ps1  
-Powershell-Loop_Label.snippets.ps1xml  
+[Powershell-Loop_Label.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Loop_Label.ps1)  
+[Powershell-Loop_Label.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell-Loop_Label.snippets.ps1xml)  
