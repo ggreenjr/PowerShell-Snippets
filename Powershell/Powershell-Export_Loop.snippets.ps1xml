@@ -1,0 +1,31 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+    <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
+        <Snippet Version='1.0.0'>
+            <Header>
+                <Title>Powershell-Export_Loop</Title>
+                <Description>Try/Catch loop to prevent export write failures.</Description>
+                <Author>Glen Green</Author>
+                <SnippetTypes>
+                    <SnippetType>Expansion</SnippetType>
+                </SnippetTypes>
+            </Header>
+
+            <Code>
+                <Script Language='PowerShell' CaretOffset='0'>
+                    <![CDATA[$filewrite = "This is a file write test"
+
+{
+$i = 1
+Do {
+$a = "NoError"
+Try {$filewrite | Export-Csv -Path $outfile -NoTypeInformation}
+Catch {[System.IO.IOException] | Out-Null ;$a="Error";Write-Host "Failed Write $i";Start-Sleep -Seconds 5}
+$i++
+}While ($a -eq "Error")
+}]]>
+                </Script>
+            </Code>
+
+    </Snippet>
+</Snippets>
+
