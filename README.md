@@ -18,6 +18,12 @@ directory of the system on which you are using the Powershell ISE.  It is my hop
 [Powershell-Custom_Object](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-custom_object "Powershell-Custom_Object")  
 [Powershell-Export_Loop](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-export_loop "Powershell-Export_Loop")  
 [Powershell-Loop_Label](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-loop_label "Powershell-Loop_Label Documentation")  
+[ExchPowershell-Connect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-connect_server "ExchPowershell-Connect_Server Documentation")  
+[ExchPowershell-Disconnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-disconnect_server "ExchPowershell-Disconnect_Server Documentation")  
+[ExchPowershell-OneConnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-oneconnect_server "ExchPowershell-OneConnect_Server Documentation")  
+[ExchPowershell-OneDisconnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-onedisconnect_server "ExchPowershell-OneDisconnect_Server Documentation")  
+[ExchPowershell-Database_Path](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-database_path "ExchPowershell-Database_Path Documentation")  
+[ExchPowershell-Database_Whitespace](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-database_whitespace "ExchPowershell-Database_Whitespace Documentation")  
 
 
 ### Powershell-Script_Documentation
