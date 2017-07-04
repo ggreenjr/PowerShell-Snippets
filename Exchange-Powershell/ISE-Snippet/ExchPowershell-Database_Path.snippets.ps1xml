@@ -1,0 +1,43 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+    <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
+        <Snippet Version='1.0.0'>
+            <Header>
+                <Title>ExchPowershell-Database_Path</Title>
+                <Description>Determines and displays database and log paths for all mailbox databases in the connected Exchange environment</Description>
+                <Author>Glen Green</Author>
+                <SnippetTypes>
+                    <SnippetType>Expansion</SnippetType>
+                </SnippetTypes>
+            </Header>
+
+            <Code>
+                <Script Language='PowerShell' CaretOffset='0'>
+                    <![CDATA[
+$array = @()
+
+$databases = (Get-MailboxDatabase -Status)
+$databases | ForEach-Object {
+$dbname = $_.Name
+$mounted = $_.Mounted
+$dbserver = $_.MountedOnServer
+$dbpath = $_.EdbFilePath
+$logpath = $_.LogFolderPath
+$circularlogging = $_.CircularLoggingEnabled
+$array += New-Object PsObject -Property @{
+'DatabaseName' = $dbname
+'Mounted' = $mounted
+'Server' = $dbserver
+'DBPath' = $dbpath
+'LogPath' = $logpath
+'CircularLogging' = $circularlogging
+}
+}
+
+$array | Sort-Object DatabaseName | Format-Table DatabaseName,Mounted,Server,DBPath,LogPath -Auto
+]]>
+                </Script>
+            </Code>
+
+    </Snippet>
+</Snippets>
+
