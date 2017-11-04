@@ -18,13 +18,9 @@ directory of the system on which you are using the Powershell ISE.  It is my hop
 [Powershell-Custom_Object](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-custom_object "Powershell-Custom_Object")  
 [Powershell-Export_Loop](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-export_loop "Powershell-Export_Loop")  
 [Powershell-Loop_Label](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-loop_label "Powershell-Loop_Label Documentation")  
-[ExchPowershell-Connect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-connect_server "ExchPowershell-Connect_Server Documentation")  
-[ExchPowershell-Disconnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-disconnect_server "ExchPowershell-Disconnect_Server Documentation")  
-[ExchPowershell-OneConnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-oneconnect_server "ExchPowershell-OneConnect_Server Documentation")  
-[ExchPowershell-OneDisconnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-onedisconnect_server "ExchPowershell-OneDisconnect_Server Documentation")  
-[ExchPowershell-Database_Path](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-database_path "ExchPowershell-Database_Path Documentation")  
-[ExchPowershell-Database_Whitespace](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchpowershell-database_whitespace "ExchPowershell-Database_Whitespace Documentation")  
-
+[ExchPS-Connect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-connect_server "ExchPS-Connect_Server Documentation")  
+[ExchPS-Disconnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-disconnect_server "ExchPS-Disconnect_Server Documentation")  
+[ExchPS-Database_Info](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-database_info "ExchPS-Database_Info Documentation")  
 
 ### Powershell-Script_Documentation
 #### Description:
@@ -46,12 +42,10 @@ usually run it.
 ### Powershell-Verify_Admin
 #### Description:
 This piece of code allows a script to verify that it is running in a Powershell instance that was started in an administrator context
-within Windows.  If it is determined that the shell is not running in an administrator context, it will write a message to the host 
-informing the user that the script is not running as an administrator, requesting that it be re-run from an administrator context, and
-then issues a break command to prevent the script from continuing to run.
+within Windows.  The previous version of the code has been replaced with a "Requires" statement that should be placed at the top of the script.
 #### Use Case:
 This can be particularly useful when running scripts which will be pulling data or making modifications to systems they are running on
-where those changes require Administrator level UAC access.  
+where those changes require Administrator level UAC access.
 #### Related Files:
 [Powershell-Verify_Admin.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Verify_Admin.ps1)  
 [Powershell-Verify_Admin.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/Powershell-Verify_Admin.snippets.ps1xml)  
@@ -71,113 +65,65 @@ data manipulated as a single object or seamlessly exported to an output file in 
 ### Powershell-Export_Loop
 #### Description:
 This piece of code will use a Try/Catch loop to catch disk write failures while exporting an object to a CSV file, notify the user of
-any write failure, and sleep for five seconds before trying again.
-
+any write failure via the warning pipeline, and sleep for five seconds before trying again.
 #### Use Case:
 This is particularly useful when a script exports to a file that may be shared, opened by a user to verify progress, or saved to a
 directory that has a regular synchronization feature associated with it (OneDrive, Box, and Dropbox folders) which will temporarily
 lock write access to the file.  Using this loop will prevent the script from continuing its operations until it has successfully
 written the required data to the output file.
-
 #### Related Files:
-[Powershell-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Export_Loop.ps1)  
+[Powershell-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Export_Loop.ps1) 
 [Powershell-Export_Loop.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/Powershell-Export_Loop.snippets.ps1xml)  
 
 ### Powershell-Loop_Label
 #### Description:
 This piece of code will assign a label to a `Do`, `Foreach`, `For`, or `While` loop.
-
 #### Use Case:
 This is particularly useful when a script is running a series of loops, or a single loop with multiple possible exits and a way
 to break the parent loop from within a child loop needs to be established.  A `Break` command can be used in conjunction with a
 loop label to specify what label is broken by the `Break` command.
-
 #### Related Files:
 [Powershell-Loop_Label.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Loop_Label.ps1)  
 [Powershell-Loop_Label.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/Powershell-Loop_Label.snippets.ps1xml)  
 
 
-### ExchPowershell-Connect_Server
+### ExchPS-Connect_Server
 #### Description:
 This piece of code will allow a script to prompt the user for credentials and then connect seamlessly to an Exchange Powershell session
-prior to execution of commands without a user needing to know how to connect to the Exchange environment via Powershell.
-
+prior to execution of commands without a user needing to know how to connect to the Exchange environment via Powershell.  It will also
+verify that no Exchange PS Session is currently in use prior to execution a connection request in order to avoid duplication of sessions
+and error messages for the user.
 #### Use Case:
 This is particularly useful when a script needs to be as simple as possible for the user of a script, or when automation and minimal
-interaction with the Exchange shell is desired.  Ideally this piece of code will be used in conjunction with `ExchPowershell-Disconnect_Server`
+interaction with the Exchange shell is desired.  Ideally this piece of code will be used in conjunction with `ExchPS-Disconnect_Server`
 so that the Exchange shell is not still loaded in the Powershell session upon the script's completion.
-
 #### Related Files:
-[ExchPowershell-Connect_Server.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPowershell-Connect_Server.ps1)  
-[ExchPowershell-Connect_Server.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPowershell-Connect_Server.snippets.ps1xml)  
+[ExchPS-Connect_Server.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPS-Connect_Server.ps1)  
+[ExchPS-Connect_Server.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPS-Connect_Server.snippets.ps1xml)  
 
 
-### ExchPowershell-Disconnect_Server
+### ExchPS-Disconnect_Server
 #### Description:
-This piece of code will allow a script to look for any open Exchange shell connections and close them.
-
+This piece of code will allow a script to look for any open Exchange shell connections and close them but will only close them if the "NewConnection" variable is set to a value of "Yes"
 #### Use Case:
-This is particularly useful when used with `ExchPowershell-Connect_Server` so that an Exchange shell which is opened by a script or a function
+This is particularly useful when used with `ExchPS-Connect_Server` so that an Exchange shell which is opened by a script or a function
 is automatically closed upon the completion of that script or function and not available for continued interactive use.
-
 #### Related Files:
-[ExchPowershell-Disconnect_Server.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPowershell-Disconnect_Server.ps1)  
-[ExchPowershell-Disconnect_Server.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPowershell-Disconnect_Server.snippets.ps1xml)  
+[ExchPS-Disconnect_Server.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPS-Disconnect_Server.ps1)  
+[ExchPS-Disconnect_Server.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPS-Disconnect_Server.snippets.ps1xml)  
 
 
-### ExchPowershell-OneConnect_Server
+### ExchPS-Database_Info
 #### Description:
-This piece of code will allow a script to prompt the user for credentials and then connect seamlessly to an Exchange Powershell session
-prior to execution of commands without a user needing to know how to connect to the Exchange environment via Powershell, but will only create
-a new connection if no Exchange shell session already exists.
+This piece of code will enumerate all of the databases in a connected Exchange environment and build an array of objects representing
+each database with commonly needed/referenced values for each database including database name, mount status, file paths, log paths,
+size and available space as integers, circular logging status, etc.  The array can then be manipulated in the pipeline to be used in
+conjunction with other objects to output information required.
 
 #### Use Case:
-This is particularly useful when a script needs to be as simple as possible for the user of a script, or when automation and minimal
-interaction with the Exchange shell is desired.  It has the added benefit of checking for existing Exchange connections in order to minimize
-potention error/warnings as well as unnecessary credential prompts.  Ideally this piece of code will be used in conjunction with the 
-`ExchPowershell-OneDisconnect_Server` snippet so that the Exchange shell is not still loaded in the Powershell session upon the script's
-completion.
+This is useful for quickly identifying important information for all mailbox databases in the connected Exchange environment and
+aggregating that data into a single object.
 
 #### Related Files:
-[ExchPowershell-OneConnect_Server.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPowershell-OneConnect_Server.ps1)  
-[ExchPowershell-OneConnect_Server.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPowershell-OneConnect_Server.snippets.ps1xml)  
-
-
-### ExchPowershell-OneDisconnect_Server
-#### Description:
-This piece of code will allow a script to look for a variable created by the 'ExchPowershell-OneConnect_Server' snippet to determine if a connection
-was automatically created, and if it was will discover any open Exchange shell connections and close them.
-
-#### Use Case:
-This is particularly useful when used with `ExchPowershell-OneConnect_Server` so that an Exchange shell which is opened by a script or a function
-is automatically closed upon the completion of that script or function and not available for continued interactive use.
-
-#### Related Files:
-[ExchPowershell-OneDisconnect_Server.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPowershell-OneDisconnect_Server.ps1)  
-[ExchPowershell-OneDisconnect_Server.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPowershell-OneDisconnect_Server.snippets.ps1xml)  
-
-
-### ExchPowershell-Database_Path
-#### Description:
-This piece of code will enumerate the databases in a connected Exchange environment and display the related file paths for each database
-in the environment.
-
-#### Use Case:
-This is useful for quickly identifying the file locations of database and log files for mailbox databases in the connected Exchange environment.
-
-#### Related Files:
-[ExchPowershell-Database_Path.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPowershell-Database_Path.ps1)  
-[ExchPowershell-Database_Path.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPowershell-Database_Path.snippets.ps1xml)  
-
-
-### ExchPowershell-Database_Whitespace
-#### Description:
-This piece of code will enumerate the databases in a connected Exchange environment and display the total size and available whitespace for each
-mailbox database in the environment.
-
-#### Use Case:
-This is useful for quickly identifying the amount of available space in a database for mailbox databases in the connected Exchange environment.
-
-#### Related Files:
-[ExchPowershell-Database_Whitespace.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPowershell-Database_Whitespace.ps1)  
-[ExchPowershell-Database_Whitespace.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPowershell-Database_Whitespace.snippets.ps1xml)  
+[ExchPS-Database_Info.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPS-Database_Info.ps1)  
+[ExchPS-Database_Path.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPS-Database_Info.snippets.ps1xml)  
