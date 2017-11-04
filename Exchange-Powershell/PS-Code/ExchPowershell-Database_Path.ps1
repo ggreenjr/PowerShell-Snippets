@@ -1,21 +1,13 @@
-﻿$array = @()
+﻿$db_array = @()
 
 $databases = (Get-MailboxDatabase -Status)
-$databases | ForEach-Object {
-$dbname = $_.Name
-$mounted = $_.Mounted
-$dbserver = $_.MountedOnServer
-$dbpath = $_.EdbFilePath
-$logpath = $_.LogFolderPath
-$circularlogging = $_.CircularLoggingEnabled
-$array += New-Object PsObject -Property @{
-'DatabaseName' = $dbname
-'Mounted' = $mounted
-'Server' = $dbserver
-'DBPath' = $dbpath
-'LogPath' = $logpath
-'CircularLogging' = $circularlogging
+ForEach ($db in $databases) {
+$db_array += New-Object PsObject -Property @{
+'DatabaseName' = $db.Name
+'Mounted' = $db.Mounted
+'Server' = $db.MountedOnServer
+'DBPath' = $db.EdbFilePath
+'LogPath' = $db.LogFolderPath
+'CircularLogging' = $db.CircularLoggingEnabled
 }
 }
-
-$array | Sort-Object DatabaseName | Format-Table DatabaseName,Mounted,Server,DBPath,LogPath -Auto
