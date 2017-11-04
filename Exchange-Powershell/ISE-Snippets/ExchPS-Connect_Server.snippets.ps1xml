@@ -2,7 +2,7 @@
     <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
         <Snippet Version='1.0.0'>
             <Header>
-                <Title>ExchPowershell-Connect_Server</Title>
+                <Title>ExchPS-Connect_Server</Title>
                 <Description>Remotely connects to an Exchange Powershell session.</Description>
                 <Author>Glen Green</Author>
                 <SnippetTypes>

@@ -2,7 +2,7 @@
     <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
         <Snippet Version='1.0.0'>
             <Header>
-                <Title>ExchPowershell-Disconnect_Server</Title>
+                <Title>ExchPS-Disconnect_Server</Title>
                 <Description>Remotely disconnects from all Exchange Powershell sessions.</Description>
                 <Author>Glen Green</Author>
                 <SnippetTypes>
