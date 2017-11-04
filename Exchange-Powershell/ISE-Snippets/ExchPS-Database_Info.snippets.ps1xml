@@ -2,8 +2,8 @@
     <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
         <Snippet Version='1.0.0'>
             <Header>
-                <Title>ExchPowershell-Database_Path</Title>
-                <Description>Determines and displays database and log paths for all mailbox databases in the connected Exchange environment</Description>
+                <Title>ExchPS-Database_Info</Title>
+                <Description>Gathers information for all mailbox databases in the connected Exchange environment into a single array object</Description>
                 <Author>Glen Green</Author>
                 <SnippetTypes>
                     <SnippetType>Expansion</SnippetType>
@@ -13,13 +13,22 @@
             <Code>
                 <Script Language='PowerShell' CaretOffset='0'>
                     <![CDATA[
-						$db_array = @()
-
+						$db_info = @()
 						$databases = (Get-MailboxDatabase -Status)
 						ForEach ($db in $databases) {
-							$db_array += New-Object PsObject -Property @{
+							$dbsize_string = ($db.DatabaseSize -replace "(.*\()|,| [a-z]*\)", "")
+							$dbsize_int = [convert]::ToInt64($dbsize_string,10)
+							$dbsize_gb = [math]::truncate($dbsize_int/1GB)
+							$dbspace_string = ($db.AvailableNewMailboxSpace -replace "(.*\()|,| [a-z]*\)", "")
+							$dbspace_int = [convert]::ToInt64($whitespace_string,10)
+							$dbspace_gb = [math]::truncate($whitespace_int/1GB)
+							$db_info += New-Object PsObject -Property @{
 								'DatabaseName' = $db.Name
 								'Mounted' = $db.Mounted
+								'DatabaseSize' = $dbsize_int
+								'DatabaseSizeGB' = $dbsize_gb
+								'DatabaseSpace' = $dbspace_int
+								'DatabaseSpaceGB' = $dbspace_gb
 								'Server' = $db.MountedOnServer
 								'DBPath' = $db.EdbFilePath
 								'LogPath' = $db.LogFolderPath
