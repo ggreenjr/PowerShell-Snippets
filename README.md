@@ -18,6 +18,7 @@ directory of the system on which you are using the Powershell ISE.  It is my hop
 [PS-Custom_Object](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-custom_object "PS-Custom_Object")  
 [PS-Export_Loop](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-export_loop "PS-Export_Loop")  
 [PS-Loop_Label](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-loop_label "PS-Loop_Label Documentation")  
+[ADPS-Test_Credential](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#adps-test_credential "ADPS-Test_Credential Documentation")
 [ExchPS-Connect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-connect_server "ExchPS-Connect_Server Documentation")  
 [ExchPS-Disconnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-disconnect_server "ExchPS-Disconnect_Server Documentation")  
 [ExchPS-Database_Info](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-database_info "ExchPS-Database_Info Documentation")  
@@ -75,6 +76,7 @@ written the required data to the output file.
 [PS-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Export_Loop.ps1)  
 [PS-Export_Loop.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Export_Loop.snippets.ps1xml)  
 
+
 ### PS-Loop_Label
 #### Description:
 This piece of code will assign a label to a `Do`, `Foreach`, `For`, or `While` loop.
@@ -85,6 +87,18 @@ loop label to specify what label is broken by the `Break` command.
 #### Related Files:
 [PS-Loop_Label.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Loop_Label.ps1)  
 [PS-Loop_Label.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Loop_Label.snippets.ps1xml)  
+
+
+### ADPS-Test_Credential
+#### Description:
+This piece of code will create a function called 'Test-Credential' which will validate a provided credential against the current Active
+Directory domain.  
+#### Use Case:
+This function is particularly useful when attempting to troubleshoot end user login issues in a domain environment and can be added to
+an environment script or custom modules that load on start so that it is ready when needed.  
+#### Related Files:
+[ADPS-Test_Credential.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/ActiveDirectory-Powershell/PS-Code/ADPS-Test_Credential.ps1)  
+[ADPS-Test_Credential.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/ActiveDirectory-Powershell/ISE-Snippets/ADPS-Test_Credential.snippets.ps1xml)  
 
 
 ### ExchPS-Connect_Server
