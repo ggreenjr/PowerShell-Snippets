@@ -12,7 +12,9 @@
 
             <Code>
                 <Script Language='PowerShell' CaretOffset='0'>
-                    <![CDATA[#Requires -RunAsAdministrator]]>
+                    <![CDATA[
+#Requires -RunAsAdministrator
+]]>
                 </Script>
             </Code>
 

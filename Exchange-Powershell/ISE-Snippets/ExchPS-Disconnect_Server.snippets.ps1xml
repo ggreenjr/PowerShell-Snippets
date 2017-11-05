@@ -13,10 +13,10 @@
             <Code>
                 <Script Language='PowerShell' CaretOffset='0'>
                     <![CDATA[
-						Switch ($newconnection) {
-						Yes {$sessions = (Get-PSSession | Where {$_.ConfigurationName -eq "Microsoft.Exchange"});$sessions | ForEach-Object {$sessionid = $_.id;Remove-PSSession $sessionid}}
-						Default {}
-						}
+Switch ($newconnection) {
+Yes {$sessions = (Get-PSSession | Where {$_.ConfigurationName -eq "Microsoft.Exchange"});$sessions | ForEach-Object {$sessionid = $_.id;Remove-PSSession $sessionid}}
+Default {}
+}
 					]]>
                 </Script>
             </Code>
