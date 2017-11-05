@@ -19,6 +19,7 @@ directory of the system on which you are using the Powershell ISE.  It is my hop
 [PS-Export_Loop](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-export_loop "PS-Export_Loop")  
 [PS-Loop_Label](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-loop_label "PS-Loop_Label Documentation")  
 [ADPS-Test_Credential](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#adps-test_credential "ADPS-Test_Credential Documentation")  
+[ADPS-Credential_Verify](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#adps-credential_verify "ADPS-Credential_Verify Documentation")  
 [ExchPS-Connect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-connect_server "ExchPS-Connect_Server Documentation")  
 [ExchPS-Disconnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-disconnect_server "ExchPS-Disconnect_Server Documentation")  
 [ExchPS-Database_Info](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-database_info "ExchPS-Database_Info Documentation")  
@@ -99,7 +100,20 @@ an environment script or custom modules that load on start so that it is ready w
 #### Related Files:
 [ADPS-Test_Credential.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/ActiveDirectory-Powershell/PS-Code/ADPS-Test_Credential.ps1)  
 [ADPS-Test_Credential.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/ActiveDirectory-Powershell/ISE-Snippets/ADPS-Test_Credential.snippets.ps1xml)  
-  
+
+
+### ADPS-Credential_Verify
+#### Description:
+Very similar to the `ADPS-Test_Credential` snippet, this piece of code will gather a credential from the user and will validate that  
+provided credential against a discovered Active Directory domain and domain controller.  This code unlike the `ADPS-Test_Credential`  
+snippet is designed to run in a script and operate in a loop until the credential is successfully authenticated.
+#### Use Case:
+This code is particularly useful when a credential needs to be provided to a script in order to execute properly.  This code will  
+operate in a loop, re-prompting for credential input until the credential successfully authenticates against the domain.
+#### Related Files:
+[ADPS-Credential_Verify.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/ActiveDirectory-Powershell/PS-Code/ADPS-Credential_Verify.ps1)  
+[ADPS-Credential_Verify.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/ActiveDirectory-Powershell/ISE-Snippets/ADPS-Credential_Verify.snippets.ps1xml)  
+
   
 ### ExchPS-Connect_Server
 #### Description:
