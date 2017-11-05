@@ -72,7 +72,7 @@ directory that has a regular synchronization feature associated with it (OneDriv
 lock write access to the file.  Using this loop will prevent the script from continuing its operations until it has successfully
 written the required data to the output file.
 #### Related Files:
-[PS-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Export_Loop.ps1) 
+[PS-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Export_Loop.ps1)  
 [PS-Export_Loop.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Export_Loop.snippets.ps1xml)  
 
 ### PS-Loop_Label
