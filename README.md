@@ -38,8 +38,8 @@ usually run it.
 #### Related Files:
 [PS-Script_Documentation.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Script_Documentation.ps1)  
 [PS-Script_Documentation.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Script_Documentation.snippets.ps1xml)  
-
-
+  
+  
 ### PS-Verify_Admin
 #### Description:
 This piece of code allows a script to verify that it is running in a Powershell instance that was started in an administrator context
@@ -50,8 +50,8 @@ where those changes require Administrator level UAC access.
 #### Related Files:
 [PS-Verify_Admin.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Verify_Admin.ps1)  
 [PS-Verify_Admin.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Verify_Admin.snippets.ps1xml)  
-
-
+  
+  
 ### PS-Custom_Object
 #### Description:
 This code will create a custom object from specified data that is already stored in variables in the Powershell session.
@@ -61,8 +61,8 @@ data manipulated as a single object or seamlessly exported to an output file in 
 #### Related Files:
 [PS-Custom_Object.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Custom_Object.ps1)  
 [PS-Custom_Object.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Custom_Object.snippets.ps1xml)  
-
-
+  
+  
 ### PS-Export_Loop
 #### Description:
 This piece of code will use a Try/Catch loop to catch disk write failures while exporting an object to a CSV file, notify the user of
@@ -75,8 +75,8 @@ written the required data to the output file.
 #### Related Files:
 [PS-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Export_Loop.ps1)  
 [PS-Export_Loop.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Export_Loop.snippets.ps1xml)  
-
-
+  
+  
 ### PS-Loop_Label
 #### Description:
 This piece of code will assign a label to a `Do`, `Foreach`, `For`, or `While` loop.
@@ -87,8 +87,8 @@ loop label to specify what label is broken by the `Break` command.
 #### Related Files:
 [PS-Loop_Label.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Loop_Label.ps1)  
 [PS-Loop_Label.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Loop_Label.snippets.ps1xml)  
-
-
+  
+  
 ### ADPS-Test_Credential
 #### Description:
 This piece of code will create a function called 'Test-Credential' which will validate a provided credential against the current Active
@@ -99,8 +99,8 @@ an environment script or custom modules that load on start so that it is ready w
 #### Related Files:
 [ADPS-Test_Credential.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/ActiveDirectory-Powershell/PS-Code/ADPS-Test_Credential.ps1)  
 [ADPS-Test_Credential.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/ActiveDirectory-Powershell/ISE-Snippets/ADPS-Test_Credential.snippets.ps1xml)  
-
-
+  
+  
 ### ExchPS-Connect_Server
 #### Description:
 This piece of code will allow a script to prompt the user for credentials and then connect seamlessly to an Exchange Powershell session
@@ -114,8 +114,8 @@ so that the Exchange shell is not still loaded in the Powershell session upon th
 #### Related Files:
 [ExchPS-Connect_Server.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPS-Connect_Server.ps1)  
 [ExchPS-Connect_Server.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPS-Connect_Server.snippets.ps1xml)  
-
-
+  
+  
 ### ExchPS-Disconnect_Server
 #### Description:
 This piece of code will allow a script to look for any open Exchange shell connections and close them but will only close them if the "NewConnection" variable is set to a value of "Yes"
@@ -125,19 +125,17 @@ is automatically closed upon the completion of that script or function and not a
 #### Related Files:
 [ExchPS-Disconnect_Server.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPS-Disconnect_Server.ps1)  
 [ExchPS-Disconnect_Server.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPS-Disconnect_Server.snippets.ps1xml)  
-
-
+  
+  
 ### ExchPS-Database_Info
 #### Description:
 This piece of code will enumerate all of the databases in a connected Exchange environment and build an array of objects representing
 each database with commonly needed/referenced values for each database including database name, mount status, file paths, log paths,
 size and available space as integers, circular logging status, etc.  The array can then be manipulated in the pipeline to be used in
 conjunction with other objects to output information required.
-
 #### Use Case:
 This is useful for quickly identifying important information for all mailbox databases in the connected Exchange environment and
 aggregating that data into a single object.
-
 #### Related Files:
 [ExchPS-Database_Info.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/PS-Code/ExchPS-Database_Info.ps1)  
 [ExchPS-Database_Path.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Exchange-Powershell/ISE-Snippets/ExchPS-Database_Info.snippets.ps1xml)  
