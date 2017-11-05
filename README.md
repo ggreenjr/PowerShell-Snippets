@@ -91,8 +91,8 @@ loop label to specify what label is broken by the `Break` command.
   
 ### ADPS-Test_Credential
 #### Description:
-This piece of code will create a function called 'Test-Credential' which will validate a provided credential against the current Active
-Directory domain.  
+This piece of code will create a function called `Test-Credential` which will validate a provided credential against the current Active
+Directory domain.
 #### Use Case:
 This function is particularly useful when attempting to troubleshoot end user login issues in a domain environment and can be added to
 an environment script or custom modules that load on start so that it is ready when needed.  
