@@ -2,7 +2,7 @@
     <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
         <Snippet Version='1.0.0'>
             <Header>
-                <Title>Powershell-Export_Loop</Title>
+                <Title>PS-Export_Loop</Title>
                 <Description>Try/Catch loop to prevent export write failures.</Description>
                 <Author>Glen Green</Author>
                 <SnippetTypes>
@@ -22,7 +22,7 @@
 							Catch {$error_status="Error";Write-Warning "Failed Write $failed_write_attempt";Start-Sleep -Seconds 5}
 							$failed_write_attempt++
 						}While ($error_status -eq "Error")
-]]>
+					]]>
                 </Script>
             </Code>
 

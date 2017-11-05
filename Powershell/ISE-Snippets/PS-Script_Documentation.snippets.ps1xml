@@ -2,7 +2,7 @@
     <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
         <Snippet Version='1.0.0'>
             <Header>
-                <Title>Powershell-Script_Documentation</Title>
+                <Title>PS-Script_Documentation</Title>
                 <Description>Powershell code that will create a commented block of text to be used for script documentation purposes.</Description>
                 <Author>Glen Green</Author>
                 <SnippetTypes>
@@ -12,18 +12,20 @@
 
             <Code>
                 <Script Language='PowerShell' CaretOffset='0'>
-                    <![CDATA[ <#
-Script Purpose: 
+                    <![CDATA[
+						<#
+						Script Purpose: 
+						
+						Answer File:
 	
-Answer File:
+						Output File:
 	
-Output File:
+						Requirements:
 	
-Requirements:
-	
-Notes:
+						Notes:
 
-#>]]>
+						#>
+					]]>
                 </Script>
             </Code>
 

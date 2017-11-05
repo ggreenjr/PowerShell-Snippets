@@ -2,7 +2,7 @@
     <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
         <Snippet Version='1.0.0'>
             <Header>
-                <Title>Powershell-Loop_Label</Title>
+                <Title>PS-Loop_Label</Title>
                 <Description>Creates a labeled &apos;Foreach&apos; loop.</Description>
                 <Author>Glen Green</Author>
                 <SnippetTypes>

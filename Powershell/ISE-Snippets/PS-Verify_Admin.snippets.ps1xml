@@ -2,7 +2,7 @@
     <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
         <Snippet Version='1.0.0'>
             <Header>
-                <Title>Powershell-Verify_Admin</Title>
+                <Title>PS-Verify_Admin</Title>
                 <Description>Verifies that the Powershell instance is running within an Administrator UAC context.</Description>
                 <Author>Glen Green</Author>
                 <SnippetTypes>
