@@ -13,16 +13,16 @@ To make use of `.snippets.ps1xml` files, they must be put in the `%USERPROFILE%\
 directory of the system on which you are using the Powershell ISE.  It is my hope that you will find these bits as useful as I have.
 
 ## Snippets:
-[Powershell-Script_Documentation](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-script_documentation "Powershell-Script_Documentation")  
-[Powershell-Verify_Admin](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-verify_admin "Powershell-Verify_Admin")  
-[Powershell-Custom_Object](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-custom_object "Powershell-Custom_Object")  
-[Powershell-Export_Loop](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-export_loop "Powershell-Export_Loop")  
-[Powershell-Loop_Label](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#powershell-loop_label "Powershell-Loop_Label Documentation")  
+[PS-Script_Documentation](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-script_documentation "PS-Script_Documentation")  
+[PS-Verify_Admin](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-verify_admin "PS-Verify_Admin")  
+[PS-Custom_Object](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-custom_object "PS-Custom_Object")  
+[PS-Export_Loop](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-export_loop "PS-Export_Loop")  
+[PS-Loop_Label](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#ps-loop_label "PS-Loop_Label Documentation")  
 [ExchPS-Connect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-connect_server "ExchPS-Connect_Server Documentation")  
 [ExchPS-Disconnect_Server](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-disconnect_server "ExchPS-Disconnect_Server Documentation")  
 [ExchPS-Database_Info](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/README.md#exchps-database_info "ExchPS-Database_Info Documentation")  
 
-### Powershell-Script_Documentation
+### PS-Script_Documentation
 #### Description:
 This piece of simple code will comment out any notes that you might want to put in your scripts without having to place a `#` at the
 beginning of each line, effectively turning everything between the `<#` and `#>` brackets into a text box for comments.
@@ -35,11 +35,11 @@ script at the very top of it.  This documentation is particularly helpful and ca
 that gets run only occasionally and required answer files may not be readily available, or is being run on a machine that does not
 usually run it.
 #### Related Files:
-[Powershell-Script_Documentation.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Script_Documentation.ps1)  
-[Powershell-Script_Documentation.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/Powershell-Script_Documentation.snippets.ps1xml)  
+[PS-Script_Documentation.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Script_Documentation.ps1)  
+[PS-Script_Documentation.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Script_Documentation.snippets.ps1xml)  
 
 
-### Powershell-Verify_Admin
+### PS-Verify_Admin
 #### Description:
 This piece of code allows a script to verify that it is running in a Powershell instance that was started in an administrator context
 within Windows.  The previous version of the code has been replaced with a "Requires" statement that should be placed at the top of the script.
@@ -47,22 +47,22 @@ within Windows.  The previous version of the code has been replaced with a "Requ
 This can be particularly useful when running scripts which will be pulling data or making modifications to systems they are running on
 where those changes require Administrator level UAC access.
 #### Related Files:
-[Powershell-Verify_Admin.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Verify_Admin.ps1)  
-[Powershell-Verify_Admin.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/Powershell-Verify_Admin.snippets.ps1xml)  
+[PS-Verify_Admin.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Verify_Admin.ps1)  
+[PS-Verify_Admin.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Verify_Admin.snippets.ps1xml)  
 
 
-### Powershell-Custom_Object
+### PS-Custom_Object
 #### Description:
 This code will create a custom object from specified data that is already stored in variables in the Powershell session.
 #### Use Case:
 This particular piece of code is useful when a script has gathered information from multiple sources and there is a need to have that
 data manipulated as a single object or seamlessly exported to an output file in a consistant fashion.
 #### Related Files:
-[Powershell-Custom_Object.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Custom_Object.ps1)  
-[Powershell-Custom_Object.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/Powershell-Custom_Object.snippets.ps1xml)  
+[PS-Custom_Object.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Custom_Object.ps1)  
+[PS-Custom_Object.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Custom_Object.snippets.ps1xml)  
 
 
-### Powershell-Export_Loop
+### PS-Export_Loop
 #### Description:
 This piece of code will use a Try/Catch loop to catch disk write failures while exporting an object to a CSV file, notify the user of
 any write failure via the warning pipeline, and sleep for five seconds before trying again.
@@ -72,10 +72,10 @@ directory that has a regular synchronization feature associated with it (OneDriv
 lock write access to the file.  Using this loop will prevent the script from continuing its operations until it has successfully
 written the required data to the output file.
 #### Related Files:
-[Powershell-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Export_Loop.ps1) 
-[Powershell-Export_Loop.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/Powershell-Export_Loop.snippets.ps1xml)  
+[PS-Export_Loop.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Export_Loop.ps1) 
+[PS-Export_Loop.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Export_Loop.snippets.ps1xml)  
 
-### Powershell-Loop_Label
+### PS-Loop_Label
 #### Description:
 This piece of code will assign a label to a `Do`, `Foreach`, `For`, or `While` loop.
 #### Use Case:
@@ -83,8 +83,8 @@ This is particularly useful when a script is running a series of loops, or a sin
 to break the parent loop from within a child loop needs to be established.  A `Break` command can be used in conjunction with a
 loop label to specify what label is broken by the `Break` command.
 #### Related Files:
-[Powershell-Loop_Label.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/Powershell-Loop_Label.ps1)  
-[Powershell-Loop_Label.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/Powershell-Loop_Label.snippets.ps1xml)  
+[PS-Loop_Label.ps1](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/PS-Code/PS-Loop_Label.ps1)  
+[PS-Loop_Label.snippets.ps1xml](https://github.com/ggreenjr/PowerShell-Snippets/blob/master/Powershell/ISE-Snippets/PS-Loop_Label.snippets.ps1xml)  
 
 
 ### ExchPS-Connect_Server
